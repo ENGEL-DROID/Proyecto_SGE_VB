@@ -1,0 +1,100 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="master.master.vb" Inherits="Proyecto_SGE_VB.master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            height: 181px;
+        }
+        .auto-style3 {
+            height: 205px;
+        }
+        .auto-style4 {
+            height: 102px;
+        }
+        .auto-style5 {
+            height: 181px;
+            width: 298px;
+        }
+        .auto-style6 {
+            height: 205px;
+            width: 298px;
+        }
+        .auto-style7 {
+            height: 102px;
+            width: 298px;
+        }
+        .auto-style8 {
+            margin-left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" style="font-family: Arial, Helvetica, sans-serif; font-size: medium; color: #993366">
+        <div>
+            <table class="auto-style2" style="border-color: #800080; background-color: #F0F0FF; padding-right: 50px;">
+                <tr>
+                    <td class="auto-style5">
+                        <asp:Label ID="lblTitulo" runat="server" Text="Proyecto SGE" Font-Bold="True" Font-Size="X-Large"></asp:Label>
+                    </td>
+                    <td class="auto-style2">
+                        <asp:Image ID="imgUsuario" runat="server" Height="150px" Width="150px" CssClass="auto-style8" ImageUrl="~/Images/logo.png" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lblUsuario" runat="server" Text="Nombre de Usuario" Font-Bold="True" Font-Size="Medium"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="lblLogin" runat="server" Font-Bold="True" Font-Size="Large">LOGIN</asp:HyperLink>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style6">
+                        <asp:Menu ID="menuCRUD" runat="server" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" StaticSubMenuIndent="10px">
+                            <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicMenuStyle BackColor="#F7F6F3" />
+                            <DynamicSelectedStyle BackColor="#5D7B9D" />
+                            <Items>
+                                <asp:MenuItem Text="Ver Productos/Contar" Value="Ver Productos/Contar" NavigateUrl="~/ProductosForm.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Añadir Registros" Value="Añadir Registros" NavigateUrl="~/InsertForm.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Modificar Registros" Value="Modificar Registros" NavigateUrl="~/UpdateForm.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Borrar Registros" Value="Borrar Registros" NavigateUrl="~/DeleteForm.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Ordenar IDs" Value="Ordenar IDs" NavigateUrl="~/OrderIdForm.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/CoustomersForm.aspx" Text="Coustomers" Value="Coustomers"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/EliminarAjaxForm.aspx" Text="Eliminar Ajax" Value="Eliminar Ajax"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/BBDDAmigos.aspx" Text="BBDD Amigos" Value="BBDD Amigos"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/OrdersGridViewForm.aspx" Text="Orders GridView" Value="Orders GridView"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ColorPostalCodeForm.aspx" Text="Color PostalCode" Value="Color PostalCode"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/TotalPrecioProductoForm.aspx" Text="Total Precio Producto" Value="Total Precio Producto"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/GridviewDetailsviewForm.aspx" Text="GirdView - DetailsView" Value="GirdView - DetailsView"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MariaDBForm.aspx" Text="MariaDB" Value="MariaDB"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/WebIISForm.aspx" Text="Web IIS" Value="Web IIS"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/InnovacionForm.aspx" Text="Innovación" Value="Innovación"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticSelectedStyle BackColor="#5D7B9D" />
+                        </asp:Menu>
+                    </td>
+                    <td class="auto-style3">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">
+                        <asp:Label ID="lblDeveloper" runat="server" Text="Engel Restrepo" Font-Bold="True"></asp:Label>
+                    </td>
+                    <td class="auto-style4"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
